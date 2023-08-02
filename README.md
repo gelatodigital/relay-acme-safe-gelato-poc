@@ -34,7 +34,7 @@ The architecture is composed of two components
 
 ```
 yarn acme
-``
+```
 
 
 
