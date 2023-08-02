@@ -29,8 +29,8 @@ import {
 import { apiCall2 } from "./apiMocks/apiCall2";
 import { signTransaction } from "./signing";
 
-const ALCHEMY_KEY = process.env.ALCHEMY_KEY;
-const RPC_URL = `https://eth-goerli.g.alchemy.com/v2/${ALCHEMY_KEY}`;
+const ALCHEMY_ID = process.env.ALCHEMY_ID;
+const RPC_URL = `https://eth-goerli.g.alchemy.com/v2/${ALCHEMY_ID}`;
 
 const provider = new ethers.providers.JsonRpcProvider(RPC_URL);
 const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
@@ -48,6 +48,7 @@ async function relayTransaction() {
   const { standardizedSafeTx, safeAddress, safeVersion, chainId } = await apiCall1({ eoa });
   console.log(" ")
 
+  
 
   /// Fronted signing of the callData
   console.log('\x1b[34m%s\x1b[0m', '    =====   Signing  =============================');

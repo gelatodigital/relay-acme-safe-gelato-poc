@@ -33,8 +33,8 @@ interface apiCall2Payload {
 const gasLimit = "8000000";
 
 export const apiCall2 = async (payload: apiCall2Payload) => {
-  const ALCHEMY_KEY = process.env.ALCHEMY_KEY;
-  const RPC_URL = `https://eth-goerli.g.alchemy.com/v2/${ALCHEMY_KEY}`;
+  const ALCHEMY_ID = process.env.ALCHEMY_ID;
+  const RPC_URL = `https://eth-goerli.g.alchemy.com/v2/${ALCHEMY_ID}`;
   const provider = new ethers.providers.JsonRpcProvider(RPC_URL);
 
   /// Gelato Relaykit with sponsor key for sponsoredCall
